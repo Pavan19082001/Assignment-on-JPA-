@@ -12,9 +12,9 @@
       <attributes>
          <id name="personName"></id>
          
-         <basic name="Person">
+         <basic name="personPhone">
          
-            <column name="PersonData"/>
+            <column name="personPhone"/>
          
          </basic>
       
@@ -22,5 +22,19 @@
  
     
     </entity> 
-   
-   </entity-mappings>
+    
+     <entity class="com.Student">
+       <table name="Student">
+       
+       </table>
+       <attributes>
+          <id name="studentName"></id>
+          <basic name="semester">
+               <column name="semester"/>
+          </basic>      
+       
+       </attributes>
+          
+     </entity>
+
+ </entity-mappings>
