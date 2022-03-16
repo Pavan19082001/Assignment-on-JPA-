@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.Ticket;
+import com.Person;
 public class Library {
     public boolean someLibraryMethod() {
         return true;
@@ -19,14 +19,14 @@ public class Library {
     public static void main(String[] args) {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("TicketPU");
 		EntityManager entitymanager = emf.createEntityManager();
-		Ticket ticket = new Ticket();
-		ticket.setSource("SarkaruVaariPaata Movie");
-		ticket.setDestination("Lakshmi Teather");
-		ticket.setPrice(200);
-		ticket.setDate(new Date(2022, 04, 9));
+		Person obj = new Person();
+		obj.setPersonName("Ajay Kumar");
+		obj.setPersonEmail("Ajay1345@gmail.com");
+		obj.setPersonPhone(9848022335l);
+		
 		
 		entitymanager.getTransaction().begin();
-		entitymanager.persist(ticket);
+		entitymanager.persist(obj);
 		entitymanager.flush();
 		entitymanager.getTransaction().commit();
 	}
